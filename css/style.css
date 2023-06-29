@@ -64,14 +64,6 @@ header h1 {
   transition: 0.3s;
 }
 
-footer {
-  height: 15vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #0f1a2b;
-}
-
 main {
   width: 100%;
 }
@@ -140,4 +132,13 @@ main .section_character_list .container_character_list .character_list_card .car
   color: #4070B3;
   background: #eeeeee;
 }
+
+footer {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f1a2b;
+}
+
 /*# sourceMappingURL=style.css.map */
