@@ -1,0 +1,5 @@
+footer{
+    height: 15vh;
+    @include display_flex_row;
+    background-color: $navbarColor;
+}

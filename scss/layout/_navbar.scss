@@ -1,0 +1,24 @@
+.navbar{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $navbarColor;
+    
+    &__button{
+        font-family: $fontParagraph;
+        color: $colorTextPrincipal;
+        font-weight: 700;
+        font-size: 1.1em;
+        border: 2px solid $colorTextPrincipalOpacityReduc;
+        padding: 0.5em 2em;
+        margin-right: 20px;
+        border-radius: 50px;
+
+        &:hover{
+            background-color: $colorTextPrincipalOpacityReduc;
+            transition: 0.3s;
+        }
+    }
+
+}
