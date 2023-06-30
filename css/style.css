@@ -29,7 +29,7 @@ body {
 
 header {
   height: 40vh;
-  background-image: url(/ressources/images/vecteezy_blue-comic-speech-bubble-cloud-halftone-background_8099991_111/vecteezy_blue-comic-speech-bubble-cloud-halftone-background_8099991.jpg);
+  background-image: url(../ressources/images/header/header-img.jpg);
   background-color: rgba(33, 58, 92, 0.9);
   background-position: center center;
   background-blend-mode: multiply;
@@ -67,7 +67,7 @@ main {
   width: 100%;
 }
 main .section_character_list {
-  padding: 0 3rem;
+  padding: 5rem 3rem 3rem 3rem;
 }
 main .section_character_list h2 {
   font-size: 2rem;
@@ -75,32 +75,30 @@ main .section_character_list h2 {
 }
 main .section_character_list .container_character_list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  padding: 2rem;
+  padding: 8rem 5rem 2rem 5rem;
   width: 1700px;
-  height: 1900px;
   border-radius: 1rem;
   margin: 0 auto;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 main .section_character_list .container_character_list .character_list_card {
-  width: 400px;
-  max-height: 550px;
+  width: 300px;
   overflow: hidden;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   margin: 0 auto;
   border-radius: 10px;
   transition: all 0.2s ease-in-out;
+  margin-bottom: 3rem;
 }
 main .section_character_list .container_character_list .character_list_card:hover {
   transform: scale(1.02);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
 }
-main .section_character_list .container_character_list .character_list_card figure {
-  width: 100%;
-}
 main .section_character_list .container_character_list .character_list_card figure img {
-  max-width: 100%;
+  width: 100%;
+  height: 230px;
   display: block;
 }
 main .section_character_list .container_character_list .character_list_card .card_text_content {
@@ -108,12 +106,14 @@ main .section_character_list .container_character_list .character_list_card .car
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
+  height: 250px;
 }
 main .section_character_list .container_character_list .character_list_card .card_text_content h3 {
   text-align: center;
 }
 main .section_character_list .container_character_list .character_list_card .card_text_content p {
   padding: 2rem 0;
+  align-self: center;
 }
 main .section_character_list .container_character_list .character_list_card .card_text_content a {
   text-align: center;
@@ -126,6 +126,9 @@ main .section_character_list .container_character_list .character_list_card .car
   transition: all 0.2s ease-in-out;
   font-weight: 600;
   margin-top: 1rem;
+}
+main .section_character_list .container_character_list .character_list_card .card_text_content a::after {
+  content: "VIEW";
 }
 main .section_character_list .container_character_list .character_list_card .card_text_content a:hover {
   color: #4070B3;
