@@ -63,6 +63,95 @@ header h1 {
   transition: 0.3s;
 }
 
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+#overlay .active {
+  position: absolute;
+  width: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #4070B3;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: default;
+}
+#overlay .active figure img {
+  width: 100%;
+  height: 280px;
+  display: block;
+}
+#overlay .active .container_card_text_overlay {
+  padding: 1.5rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 190px auto;
+  height: auto;
+  background: #213A5C;
+}
+#overlay .active h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+#overlay .active .short-desc {
+  padding: 3rem 0 0 0;
+}
+#overlay .active .description {
+  padding: 2rem 0 2rem 0;
+}
+#overlay .active .card_btn_overlay {
+  display: flex;
+  justify-content: center;
+}
+#overlay .active .card_btn_overlay .btn-edit {
+  border: none;
+  background: #4070B3;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-right: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+#overlay .active .card_btn_overlay .btn-edit::after {
+  content: "EDIT";
+}
+#overlay .active .card_btn_overlay .btn-edit:hover {
+  background: white;
+  color: #4070B3;
+}
+#overlay .active .card_btn_overlay .btn-del {
+  border: none;
+  background: #b00101;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+#overlay .active .card_btn_overlay .btn-del::after {
+  content: "DELETE";
+}
+#overlay .active .card_btn_overlay .btn-del:hover {
+  background: white;
+  color: #b00101;
+}
+
 main {
   width: 100%;
 }
@@ -133,6 +222,111 @@ main .section_character_list .container_character_list .character_list_card .car
 main .section_character_list .container_character_list .character_list_card .card_text_content a:hover {
   color: #4070B3;
   background: #eeeeee;
+}
+
+.navbar a {
+  display: none;
+}
+
+main {
+  width: 100%;
+}
+main .section_create_character {
+  padding: 5rem 3rem 3rem 3rem;
+}
+main .section_create_character h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+main .section_create_character .container_create_character {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  width: 1700px;
+  border-radius: 1rem;
+  margin: 0 auto;
+}
+main .section_create_character .container_create_character form {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 3rem 3rem 3rem;
+  border-radius: 5px;
+  width: 600px;
+  background: #2b466f;
+}
+main .section_create_character .container_create_character form .container_upload_file {
+  margin-bottom: 2rem;
+}
+main .section_create_character .container_create_character form .container_upload_file #file-input {
+  display: none;
+}
+main .section_create_character .container_create_character form .container_upload_file #file-input + label {
+  padding: 1rem;
+  background: blue;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+main .section_create_character .container_create_character form .container_upload_file #file-input + label:hover {
+  background: white;
+  color: blue;
+  border: 1px solid blue;
+}
+main .section_create_character .container_create_character form .container_upload_file .container_btn_upload_img {
+  color: white;
+  font-family: "Hind", sans-serif;
+}
+main .section_create_character .container_create_character form .container_upload_file .container_btn_upload_img .btn_upload_text {
+  font-weight: 600;
+}
+main .section_create_character .container_create_character form .input-create-text {
+  height: 50px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid grey;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  outline: none;
+  color: white;
+  letter-spacing: 0.1rem;
+}
+main .section_create_character .container_create_character form textarea {
+  background: none;
+  border: 1px solid grey;
+  outline: none;
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: white;
+  padding: 1rem 1.5rem;
+  margin-bottom: 3rem;
+}
+main .section_create_character .container_create_character form .btn-create-send {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid white;
+  background: green;
+  margin: 0 auto;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+main .section_create_character .container_create_character form .btn-create-send:hover {
+  background: rgb(232, 232, 232);
+  color: green;
+  border: 2px solid green;
+}
+main .section_create_character .container_create_character form label {
+  color: white;
 }
 
 footer {
