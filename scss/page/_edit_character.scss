@@ -1,0 +1,113 @@
+.container_edit_character {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .card_edit_character {
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5) ;
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 3rem 3rem 3rem;
+        border-radius: 5px;
+        width: 600px;
+        background: #2b466f;
+
+        & figure {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            height: 150px;
+            width: 150px;
+
+            .img_edit_character {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        #file-input-edit {
+            display: none;
+            & + label {
+                padding: 1rem;
+                background: blue;
+                border: 1px solid white;
+                border-radius: 5px;
+                font-family: $fontTitle;
+                color: white;
+                font-weight: 600;
+                transition: all 0.2s ease-in-out;
+                cursor: pointer;
+                max-width: 180px;
+
+                    &:hover {
+                        background: white;
+                        color: blue;
+                        border: 1px solid blue;
+                    }
+            }
+        }
+
+        .container_chosen_file_edit {
+            margin-top: 3rem;
+            .container_btn_upload_img_edit {
+                color: white;
+                font-weight: 600;
+                font-family: $fontTitle;
+                font-size: 0.8rem;
+            }
+        }
+
+        .card_text_content_edit {
+            display: flex;
+            flex-direction: column;
+            margin-top: 3rem;
+
+            .input_create_text_edit {
+                height: 50px;
+                background: none;
+                border: none;
+                border-bottom: 1px solid grey;
+                margin-bottom: 1rem;
+                padding: 1rem 1.5rem;
+                font-size: 1.2rem;
+                outline: none;
+                color: white;
+                letter-spacing: 0.1rem;
+            }
+
+            #description_edit {
+                background: none;
+                    border: 1px solid grey;
+                    outline: none;
+                    margin-top: 2rem;
+                    font-size: 1rem;
+                    color: white;
+                    padding: 1rem 1.5rem;
+                    margin-bottom: 3rem;
+            }
+        }
+
+        .btn-save-edit {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid white;
+            background: green;
+            margin: 0 auto;
+            border-radius: 5px;
+            color: white;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background: rgb(232, 232, 232);
+                color: green;
+                border: 2px solid green;
+            }
+        }
+    }
+}

@@ -1,6 +1,7 @@
 const allCharacterContainer = document.querySelector('.container_character_list');
 const getBody = document.querySelector('body');
 const getOverlay = document.querySelector('#overlay');
+let idCharacter;
 
 function getAllCharacter() {
     const getAllCharacterApi = fetch('https://character-database.becode.xyz/characters');
@@ -53,6 +54,7 @@ function getAllCharacter() {
 }
 
 function getCharacterById(idCharacter) {
+    console.log(idCharacter)
     const getCharacterApi = fetch('https://character-database.becode.xyz/characters/'+ idCharacter);
 
     getCharacterApi.then(async (response) => {
@@ -82,6 +84,7 @@ function removeReloadBtn(btn) {
     const clickHandler = function(event) {
         event.preventDefault();
         const targetId = this.getAttribute('data-id');
+        idCharacter = targetId;
         on();
         getCharacterById(targetId);
     };
@@ -113,8 +116,8 @@ function off() {
 
 const btnEdit = document.querySelector('.btn-edit');
 
-btnEdit.addEventListener('click', function() {
-
+btnEdit.addEventListener('click', function(event) {
+   location.href = `http://127.0.0.1:5500/page/edit_character.html?${idCharacter}`;
 })
 
 getAllCharacter()

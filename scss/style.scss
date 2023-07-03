@@ -1,11 +1,13 @@
 @import './utils/variables';
 @import './utils/mixins';
-@import './base/font.scss';
-@import './base/reset.scss';
+@import './base/font';
+@import './base/reset';
 @import './base/base';
 @import './layout/header';
 @import './layout/navbar';
 @import './page/index';
-@import './page/create_character.scss';
+@import './page/create_character';
 @import './layout/footer';
 @import './layout/modal';
+@import './page/edit_character';
+@import './page/redirect';
