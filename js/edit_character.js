@@ -104,4 +104,11 @@ btnSubmit.addEventListener('click', async function(event) {
     }
 })
 
+const btnDelete = document.querySelector('.btn-del');
+
+btnDelete.addEventListener('click', function(event) {
+    event.preventDefault();
+
+})
+
 getCharacterById(idCharacterUrl);

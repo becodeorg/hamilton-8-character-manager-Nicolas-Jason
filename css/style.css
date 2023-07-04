@@ -224,10 +224,6 @@ main .section_character_list .container_character_list .character_list_card .car
   background: #eeeeee;
 }
 
-.navbar a {
-  display: none;
-}
-
 main {
   width: 100%;
 }

@@ -120,4 +120,36 @@ btnEdit.addEventListener('click', function(event) {
    location.href = `http://127.0.0.1:5500/page/edit_character.html?${idCharacter}`;
 })
 
+async function deleteCharacter() {
+       
+    try {
+
+        if (confirm('are you sure you want to delete the character?')) {
+
+            const response = await fetch('https://character-database.becode.xyz/characters/' + idCharacter, {
+                method: "DELETE",
+            });
+    
+            if (response.ok) {
+                document.location.href = "http://127.0.0.1:5500/page/redirect.html";
+            } else {
+                throw new Error("Échec de la suppression du personnage");
+            }
+        } else {
+            console.log('ABORDED !')
+        }
+    } catch (error) {
+        console.log("Erreur lors de la suppression !", error);
+    }
+}
+
+
+const btnDelete = document.querySelector('.btn-del');
+
+btnDelete.addEventListener('click', function(event) {
+    event.preventDefault();
+    deleteCharacter()
+    console.log('OK')
+})
+
 getAllCharacter()
