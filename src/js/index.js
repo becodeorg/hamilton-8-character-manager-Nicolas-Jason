@@ -29,6 +29,7 @@ function getAllCharacter() {
                 createFigure.insertAdjacentElement('afterend', createDivTextContent);
 
                 const createNameCharacter = document.createElement('h3');
+                createNameCharacter.setAttribute('class', 'all_h3');
                 const nameTextNode = document.createTextNode(element.name);
                 createNameCharacter.appendChild(nameTextNode);
                 createDivTextContent.appendChild(createNameCharacter);
@@ -88,7 +89,7 @@ function removeReloadBtn(btn) {
         const targetId = this.getAttribute('data-id');
         idCharacter = targetId;
         on();
-        getCharacterById(targetId);
+        getCharacterById(targetId);createNameCharacter.setAttribute('class', 'all_h3')
     };
 
     btn.forEach(elem => {
@@ -155,3 +156,23 @@ btnDelete.addEventListener('click', function(event) {
 })
 
 getAllCharacter()
+
+
+const characterName = document.getElementsByClassName('all_h3')
+console.log(characterName)
+const input = document.getElementById('barre')
+
+input.addEventListener('input', (e) =>{
+    let value = e.target.value;
+    characterName.forEach((character) => {
+        if(characterName.textContent.indexOf(value)>=0){
+
+            character.style.display = "block";
+        }else{
+
+            character.style.display = "none";
+
+
+        }
+    })
+})
