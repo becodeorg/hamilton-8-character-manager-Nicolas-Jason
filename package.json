@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass -w scss/style.scss:css/style.css",
+    "sass": "sass -w src/scss/style.scss:src/css/style.css",
     "webpack": "webpack",
     "start": "webpack serve"
   },
@@ -21,7 +21,6 @@
   "dependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.8.1",
-    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
     "postcss-loader": "^7.3.3",
@@ -37,6 +36,7 @@
     "babel-loader": "^8.0.6",
     "entry-loader": "^0.2.0",
     "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^6.2.0",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"

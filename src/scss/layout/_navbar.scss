@@ -21,15 +21,17 @@
         }
     }
     img{
-        height: 8vh;
+        height: 5vh;
     }
 }
 
 #barre{
+    border: none;
     border-bottom: 2px solid $colorTextPrincipalOpacityReduc;
-    border-top: $colorTextPrincipalOpacityReduc;
-    border-left: $colorTextPrincipalOpacityReduc;
-    border-right: $colorTextPrincipalOpacityReduc;
     background-color: $navbarColor;
     color: white;
+    outline: none;
+    margin-right: 2rem;
+    letter-spacing: 0.1rem;
+    font-size: 1.1rem;
 }

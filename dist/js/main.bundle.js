@@ -97,6 +97,7 @@ function getAllCharacter() {
               createDivTextContent.setAttribute('class', 'card_text_content');
               createFigure.insertAdjacentElement('afterend', createDivTextContent);
               var createNameCharacter = document.createElement('h3');
+              createNameCharacter.setAttribute('class', 'all_h3');
               var nameTextNode = document.createTextNode(element.name);
               createNameCharacter.appendChild(nameTextNode);
               createDivTextContent.appendChild(createNameCharacter);
@@ -261,6 +262,33 @@ btnDelete.addEventListener('click', function (event) {
   console.log('OK');
 });
 getAllCharacter();
+var waitForAllH3Elements = new Promise(function (resolve) {
+  var checkElements = function checkElements() {
+    var characterName = document.querySelectorAll('.all_h3');
+    if (characterName.length > 0) {
+      resolve(characterName);
+    } else {
+      setTimeout(checkElements, 100);
+    }
+  };
+  checkElements();
+});
+waitForAllH3Elements.then(function (characterName) {
+  var input = document.querySelector('#barre');
+  input.addEventListener('input', function (e) {
+    var value = e.target.value.toLowerCase();
+    characterName.forEach(function (character) {
+      var cardCharacter = character.closest('.character_list_card');
+      var characterText = character.textContent.toLowerCase();
+      console.log(character);
+      if (characterText.indexOf(value) !== -1) {
+        cardCharacter.style.display = "block";
+      } else {
+        cardCharacter.style.display = "none";
+      }
+    });
+  });
+});
 })();
 
 /******/ })()

@@ -21,8 +21,15 @@ module.exports = {
         use: 'babel-loader',
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|jpe?g|gif)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'assets/images/[name].[contenthash][ext]',
+        },
+      },
+      {
+        test: /\.svg$/i,
+        type: 'asset/inline',
         generator: {
           filename: 'assets/images/[name].[contenthash][ext]',
         },

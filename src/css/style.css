@@ -62,6 +62,20 @@ header h1 {
   background-color: rgba(238, 238, 238, 0.3);
   transition: 0.3s;
 }
+.navbar img {
+  height: 5vh;
+}
+
+#barre {
+  border: none;
+  border-bottom: 2px solid rgba(238, 238, 238, 0.3);
+  background-color: #0f1a2b;
+  color: white;
+  outline: none;
+  margin-right: 2rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+}
 
 #overlay {
   position: fixed; /* Sit on top of the page content */

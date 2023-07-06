@@ -89,7 +89,7 @@ function removeReloadBtn(btn) {
         const targetId = this.getAttribute('data-id');
         idCharacter = targetId;
         on();
-        getCharacterById(targetId);createNameCharacter.setAttribute('class', 'all_h3')
+        getCharacterById(targetId);
     };
 
     btn.forEach(elem => {
@@ -158,21 +158,33 @@ btnDelete.addEventListener('click', function(event) {
 getAllCharacter()
 
 
-const characterName = document.getElementsByClassName('all_h3')
-console.log(characterName)
-const input = document.getElementById('barre')
+const waitForAllH3Elements = new Promise((resolve) => {
+  const checkElements = () => {
+    const characterName = document.querySelectorAll('.all_h3');
+    if (characterName.length > 0) {
+      resolve(characterName);
+    } else {
+      setTimeout(checkElements, 100);
+    }
+  };
 
-input.addEventListener('input', (e) =>{
-    let value = e.target.value;
+  checkElements();
+});
+
+waitForAllH3Elements.then((characterName) => {
+  const input = document.querySelector('#barre');
+
+  input.addEventListener('input', (e) => {
+    let value = e.target.value.toLowerCase();
     characterName.forEach((character) => {
-        if(characterName.textContent.indexOf(value)>=0){
-
-            character.style.display = "block";
-        }else{
-
-            character.style.display = "none";
-
-
-        }
-    })
-})
+        const cardCharacter = character.closest('.character_list_card');
+        const characterText = character.textContent.toLowerCase();
+      console.log(character);
+      if (characterText.indexOf(value) !== -1) {
+        cardCharacter.style.display = "block";
+      } else {
+        cardCharacter.style.display = "none";
+      }
+    });
+  });
+});
