@@ -1,0 +1,44 @@
+{
+  "name": "hamilton-8-character-manager-nicolas-jason",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w src/scss/style.scss:src/css/style.css",
+    "webpack": "webpack",
+    "start": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/becodeorg/hamilton-8-character-manager-Nicolas-Jason.git"
+  },
+  "author": "Jason Nicolas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/becodeorg/hamilton-8-character-manager-Nicolas-Jason/issues"
+  },
+  "homepage": "https://github.com/becodeorg/hamilton-8-character-manager-Nicolas-Jason#readme",
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss-loader": "^7.3.3",
+    "sass": "^1.63.6",
+    "sass-loader": "^13.3.2",
+    "sass-resources-loader": "^2.2.5",
+    "style-loader": "^3.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.22.6",
+    "@babel/preset-env": "^7.12.17",
+    "babel-loader": "^8.0.6",
+    "entry-loader": "^0.2.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^6.2.0",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
