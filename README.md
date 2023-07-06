@@ -1,7 +1,7 @@
-# Project ESCAPIUM
+# Project Manage Character
 ## Table of contents
 
-- [Project ESCAPIUM](#project-escapium)
+- [Project Manage Character](#project-manage-character)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
