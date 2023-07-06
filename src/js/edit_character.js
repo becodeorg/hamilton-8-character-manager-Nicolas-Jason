@@ -1,3 +1,5 @@
+import '../scss/style.scss';
+
 const queryStringId = window.location.search;
 const idCharacterUrl = queryStringId.slice(1);
 let uploadFile;
@@ -97,7 +99,7 @@ btnSubmit.addEventListener('click', async function(event) {
                 })
             });
             const data = await sendDataToAPI.json();
-            document.location.href="http://127.0.0.1:5500/page/redirect.html";
+            location.replace('/page/redirect.html')
     }   catch (error) {
             console.log(error);
         }

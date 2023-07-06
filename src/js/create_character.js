@@ -1,3 +1,7 @@
+import '../scss/style.scss';
+
+let url = window.location.href;
+console.log(url, 'URL')
 const btnSubmit = document.querySelector('.btn-create-send');
 let inputFile = document.querySelector('#file-input')
 let fileNameField = document.querySelector('#file-name')
@@ -61,6 +65,7 @@ btnSubmit.addEventListener('click', async function(event) {
             });
             const data = await sendDataToAPI.json();
             console.table('DATA OK', data);
+            location.replace('/page/redirect.html');
     }   catch (error) {
             console.log(error);
         }

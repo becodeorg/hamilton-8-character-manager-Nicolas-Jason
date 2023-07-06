@@ -1,3 +1,5 @@
+import '../scss/style.scss';
+
 const allCharacterContainer = document.querySelector('.container_character_list');
 const getBody = document.querySelector('body');
 const getOverlay = document.querySelector('#overlay');
@@ -117,7 +119,7 @@ function off() {
 const btnEdit = document.querySelector('.btn-edit');
 
 btnEdit.addEventListener('click', function(event) {
-   location.href = `http://127.0.0.1:5500/page/edit_character.html?${idCharacter}`;
+   location.replace(`/page/edit_character.html?${idCharacter}`)
 })
 
 async function deleteCharacter() {
@@ -131,7 +133,7 @@ async function deleteCharacter() {
             });
     
             if (response.ok) {
-                document.location.href = "http://127.0.0.1:5500/page/redirect.html";
+                location.replace('/page/redirect.html')
             } else {
                 throw new Error("Échec de la suppression du personnage");
             }
