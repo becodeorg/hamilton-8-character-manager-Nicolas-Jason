@@ -20,5 +20,16 @@
             transition: 0.3s;
         }
     }
+    img{
+        height: 8vh;
+    }
+}
 
+#barre{
+    border-bottom: 2px solid $colorTextPrincipalOpacityReduc;
+    border-top: $colorTextPrincipalOpacityReduc;
+    border-left: $colorTextPrincipalOpacityReduc;
+    border-right: $colorTextPrincipalOpacityReduc;
+    background-color: $navbarColor;
+    color: white;
 }
